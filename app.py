@@ -36,7 +36,7 @@ with tab1:
             prompt = f"Interior room design in {style} style, professional photography, high quality"
             
             response = requests.post(
-                "https://api-inference.huggingface.co/models/stabilityai/stable-diffusion-xl-base-1.0",
+                "https://router.huggingface.co/hf-inference/models/stabilityai/stable-diffusion-xl-base-1.0",
                 headers={"Authorization": f"Bearer {HF_TOKEN}"},
                 json={"inputs": prompt}
             )
@@ -68,7 +68,7 @@ with tab2:
         
         with st.spinner("Generating your room..."):
             response = requests.post(
-                "https://api-inference.huggingface.co/models/stabilityai/stable-diffusion-xl-base-1.0",
+                "https://router.huggingface.co/hf-inference/models/stabilityai/stable-diffusion-xl-base-1.0",
                 headers={"Authorization": f"Bearer {HF_TOKEN}"},
                 json={"inputs": prompt}
             )
